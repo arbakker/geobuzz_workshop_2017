@@ -1,7 +1,7 @@
-Create new layer with new style in GeoPackage
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+Create new layer in OWS-context file
++++++++++++++++++++++++++++++++++++++++
 
-In this exercise we are going to add a new layer to the workshop.gpkg you have downloaded at :ref:`open-geopackage`. 
+In this exercise we are going to add a new layer to the ``workshop.gpkg`` a you have downloaded at :ref:`open-geopackage`. 
 
 The layer will be added in two steps:
 
@@ -45,12 +45,8 @@ The new style will be applied to the dataset ``wijken_2017``. Before we classify
 	select max(P_HH_M_K) as 'max', min(P_HH_M_K) as 'min' from wijk_2017 where P_HH_M_K > -1 ;
 
 
-That outputs:
+That outputs ``max=74, min=0``.
 
-.. code-block:: 
-
-	max     min
-	"74"	"0"
 
 Because the attribute ``P_HH_M_K`` is a percentage we can divide the data in 5 equal bins of 20:
 
@@ -62,7 +58,8 @@ Because the attribute ``P_HH_M_K`` is a percentage we can divide the data in 5 e
 	60-80
 	80-100
 
-Next we need to create a color ramp to represent the different values. `ColorBrewer <http://colorbrewer2.org>`_ has an excellent webapplication for this. In our case we have sequential data with 5 classes:
+
+Next we need to create a color ramp to represent the different values. `ColorBrewer <http://colorbrewer2.org>`_ has an excellent web application for this. In our case we have sequential data with 5 classes:
 
 .. image::  _static/color_brewer.png
     :width: 400px

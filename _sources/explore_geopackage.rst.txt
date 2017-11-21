@@ -18,7 +18,7 @@ This file has been generated with the OWS-context GeoPackage export functionalit
 QGIS should come with the `QGIS GeoPackage extension <https://github.com/pka/qgpkg>`_ installed. If the extension is installed *and* enabled the the following buttons should be visible:
 
 .. image:: _static/gpkg_extension_buttons.png
-    :width: 400px
+    :width: 200px
     :align: center
 
 Click the *Read project from geopackage* button (the one with the arrow pointing up) and browse to the previously downloaded OWS-context GeoPackage file. QGIS now opens up the OWS-context GeoPackage file:
@@ -29,7 +29,7 @@ Click the *Read project from geopackage* button (the one with the arrow pointing
     :align: center
 
 
-Unfortunately it is hard to tell on what attribute the classification is made, QGIS should take the title of the style which is in the SLD, but this still a pending issue. The layers in project are classsified as follows:
+Unfortunately it is hard to tell on what attribute the classification is made, QGIS should take the title of the style which is in the SLD, but this still a pending issue. The layers in project are classified as follows:
 
 - ``gem_2017``: ``P_EENP_HH``
 - ``wijk_2017``: ``BEV_DICHTH``
@@ -54,7 +54,7 @@ In the tab *Database Structure* the tables in the GeoPackage are listed. There a
 2. Tables required by the `GeoPackage OWS-context format <https://portal.opengeospatial.org/files/?artifact_id=55183>`_
 3. Dataset tables, in this case  ``buurt_2017`` , ``gem_2017``and ``wijk_2017``
 
-See below for a short description on each table in the GeoPackage. You can view the data by opening the *Browse Data* tab and then select the table you are interested in from the dropdown menu at the top of the page.
+See below for a short description on each table in the GeoPackage. You can view the data by opening the *Browse Data* tab and then select the table you are interested in from the drop-down menu at the top of the page.
 
 .. image:: _static/db_browser_browse_data.png
     :width: 400px
@@ -89,7 +89,7 @@ GeoPackage OWS-context format tables
 owc_context
 ~~~~~~~~~~~~
 
-Containing the `OWS-context <http://www.owscontext.org/>`_ file that defines the map definition; it contains which layers, layer sequence, map bbox and projection of the map.
+Containing the `OWS-context <http://www.owscontext.org/>`_ file that defines the map definition; it contains which layers, layer sequence, map bounding-box and projection of the map.
 
 owc_style
 ~~~~~~~~~~~~
@@ -99,7 +99,7 @@ Table containing styling information. Styling is saved in `SLD file <http://www.
 
 ocw_resource
 ~~~~~~~~~~~~~
-Table containing additional resource files. For example picture symbols, svg icons and fonts refenced in style. 
+Table containing additional resource files. For example picture symbols, SVG icons and fonts referenced in style. 
 
 
 

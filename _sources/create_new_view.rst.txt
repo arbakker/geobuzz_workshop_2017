@@ -1,9 +1,9 @@
-Create new view in Geockage 
+Create new layer in GeoPackage
 +++++++++++++++++++++++++++++++++++++++
 
-In this exercise we are going to create a new layer based on a view with a filter. A view in a database can be thought of as a virtual table, only the defintion of the view is stored in the database, for more information see the Wikipedia `entry <https://en.wikipedia.org/wiki/View_(SQL)>`_ on database views.
+In this exercise we are going to create a new layer based on a view with a filter. A view in a database can be thought of as a virtual table, only the definition of the view is stored in the database, for more information see the Wikipedia `entry <https://en.wikipedia.org/wiki/View_(SQL)>`_ on database views.
 
-For our new view we are only interested in neighbourhoods (buurten) that are located in the municipality (gemeente) Den Bosch. To create this view execute the following SQL in the *DB Browser for SQLite*:
+For our new view we are only interested in neighborhoods (buurten) that are located in the municipality (gemeente) Den Bosch. To create this view execute the following SQL in the *DB Browser for SQLite*:
 
 .. code:: SQL
 

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Create new view in Geockage &#8212; GeoPackage Workshop - Geobuzz 2017 1.0 documentation</title>
+    <title>3. Create new layer in GeoPackage &#8212; GeoPackage Workshop - Geobuzz 2017 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Create new layer with new style in GeoPackage" href="create_new_layer.html" />
+    <link rel="prev" title="2. Create new layer in OWS-context file" href="create_new_layer.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -58,17 +58,16 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">GeoPackage Workshop - Geobuzz 2017</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explore_geopackage.html">Explore GeoPackage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="create_new_layer.html">Create new layer with new style in GeoPackage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Create new view in Geockage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explore_geopackage.html">1. Explore GeoPackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_new_layer.html">2. Create new layer in OWS-context file</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Create new layer in GeoPackage</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="create_new_layer.html" title="previous chapter">Create new layer with new style in GeoPackage</a></li>
+      <li>Previous: <a href="create_new_layer.html" title="previous chapter">2. Create new layer in OWS-context file</a></li>
   </ul></li>
 </ul>
 </div>
@@ -78,10 +77,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="create-new-view-in-geockage">
-<h1>Create new view in Geockage<a class="headerlink" href="#create-new-view-in-geockage" title="Permalink to this headline">¶</a></h1>
-<p>In this exercise we are going to create a new layer based on a view with a filter. A view in a database can be thought of as a virtual table, only the defintion of the view is stored in the database, for more information see the Wikipedia <a class="reference external" href="https://en.wikipedia.org/wiki/View_(SQL)">entry</a> on database views.</p>
-<p>For our new view we are only interested in neighbourhoods (buurten) that are located in the municipality (gemeente) Den Bosch. To create this view execute the following SQL in the <em>DB Browser for SQLite</em>:</p>
+  <div class="section" id="create-new-layer-in-geopackage">
+<h1>3. Create new layer in GeoPackage<a class="headerlink" href="#create-new-layer-in-geopackage" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise we are going to create a new layer based on a view with a filter. A view in a database can be thought of as a virtual table, only the definition of the view is stored in the database, for more information see the Wikipedia <a class="reference external" href="https://en.wikipedia.org/wiki/View_(SQL)">entry</a> on database views.</p>
+<p>For our new view we are only interested in neighborhoods (buurten) that are located in the municipality (gemeente) Den Bosch. To create this view execute the following SQL in the <em>DB Browser for SQLite</em>:</p>
 <div class="code SQL highlight-default"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VIEW</span> <span class="n">buurt_2017_den_bosch</span> <span class="n">AS</span>
 <span class="n">SELECT</span> <span class="o">*</span>
 <span class="n">FROM</span> <span class="n">buurt_2017</span>

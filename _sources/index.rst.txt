@@ -9,6 +9,7 @@ GeoPackage Workshop - Geobuzz 2017
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
+   :numbered: 2
 
    explore_geopackage
    create_new_layer
@@ -18,9 +19,6 @@ GeoPackage Workshop - Geobuzz 2017
 Requirements for this workshop
 +++++++++++++++++++++++++++++++
 
-
-- QGIS 2.18 or higher
+- QGIS (version used for this workshop 2.18)
 - `GeoPackage Extension for QGIS installed <https://github.com/pka/qgpkg>`_
-- DB Browser for SQLite
-
-.. |year| date:: %Y 
+- DB Browser for SQLite (version used for this workshop 3.10.1)
