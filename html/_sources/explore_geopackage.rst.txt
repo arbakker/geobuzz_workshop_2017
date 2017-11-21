@@ -6,7 +6,7 @@ Explore GeoPackage
 Open GeoPackage in QGIS
 +++++++++++++++++++++++++++++
 
-Download the OWS-context GeoPackage file `here <https://drive.geocat.net/public.php?service=files&t=765611f0e82f69835942756d5707ad27&download>`_  as ``workshop.gpkg``. In the rest of this workshop there will be referred to ``workshop.gpkg``.
+Download the OWS-context GeoPackage file `here <https://drive.geocat.net/public.php?service=files&t=50ffac9feb50a73a509fb02ab397e670&download>`_  as ``workshop.gpkg``. In the rest of this workshop there will be referred to ``workshop.gpkg``.
 
 This file has been generated with the OWS-context GeoPackage export functionality in GeoCat Bridge [#f1]_ . The original MXD in ArcGIS looks like this:
 
