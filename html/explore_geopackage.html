@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Explore GeoPackage &#8212; GeoPackage Workshop - Geobuzz 2017 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Create new layer with new style in GeoPackage" href="create_new_layer.html" />
+    <link rel="prev" title="GeoPackage Workshop - Geobuzz 2017" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">GeoPackage Workshop - Geobuzz 2017</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Explore GeoPackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-geopackage-in-qgis">Open GeoPackage in QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-geopackage-in-db-browser-for-sqlite">Open GeoPackage in DB Browser for SQLITE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geopackage-format-tables">GeoPackage format tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geopackage-ows-context-format-tables">GeoPackage OWS-context format tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-tables">Dataset tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="create_new_layer.html">Create new layer with new style in GeoPackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_new_view.html">Create new view in Geockage</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">GeoPackage Workshop - Geobuzz 2017</a></li>
+      <li>Next: <a href="create_new_layer.html" title="next chapter">Create new layer with new style in GeoPackage</a></li>
+  </ul></li>
+</ul>
+</div>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="explore-geopackage">
+<h1>Explore GeoPackage<a class="headerlink" href="#explore-geopackage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="open-geopackage-in-qgis">
+<span id="open-geopackage"></span><h2>Open GeoPackage in QGIS<a class="headerlink" href="#open-geopackage-in-qgis" title="Permalink to this headline">¶</a></h2>
+<p>Download the OWS-context GeoPackage file <a class="reference external" href="https://drive.geocat.net/public.php?service=files&amp;t=765611f0e82f69835942756d5707ad27&amp;download">here</a>  as <code class="docutils literal"><span class="pre">workshop.gpkg</span></code>. In the rest of this workshop there will be referred to <code class="docutils literal"><span class="pre">workshop.gpkg</span></code>.</p>
+<p>This file has been generated with the OWS-context GeoPackage export functionality in GeoCat Bridge <a class="footnote-reference" href="#f1" id="id1">[1]</a> . The original MXD in ArcGIS looks like this:</p>
+<a class="reference internal image-reference" href="_images/open_geopackage_arcgis.png"><img alt="_images/open_geopackage_arcgis.png" class="align-center" src="_images/open_geopackage_arcgis.png" style="width: 400px;" /></a>
+<p>QGIS should come with the <a class="reference external" href="https://github.com/pka/qgpkg">QGIS GeoPackage extension</a> installed. If the extension is installed <em>and</em> enabled the the following buttons should be visible:</p>
+<a class="reference internal image-reference" href="_images/gpkg_extension_buttons.png"><img alt="_images/gpkg_extension_buttons.png" class="align-center" src="_images/gpkg_extension_buttons.png" style="width: 400px;" /></a>
+<p>Click the <em>Read project from geopackage</em> button (the one with the arrow pointing up) and browse to the previously downloaded OWS-context GeoPackage file. QGIS now opens up the OWS-context GeoPackage file:</p>
+<a class="reference internal image-reference" href="_images/open_geopackage_qgis.png"><img alt="_images/open_geopackage_qgis.png" class="align-center" src="_images/open_geopackage_qgis.png" style="width: 400px;" /></a>
+<p>Unfortunately it is hard to tell on what attribute the classification is made, QGIS should take the title of the style which is in the SLD, but this still a pending issue. The layers in project are classsified as follows:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">gem_2017</span></code>: <code class="docutils literal"><span class="pre">P_EENP_HH</span></code></li>
+<li><code class="docutils literal"><span class="pre">wijk_2017</span></code>: <code class="docutils literal"><span class="pre">BEV_DICHTH</span></code></li>
+<li><code class="docutils literal"><span class="pre">buurt_2017</span></code>: <code class="docutils literal"><span class="pre">P_00_14_JR</span></code></li>
+</ul>
+</div>
+<div class="section" id="open-geopackage-in-db-browser-for-sqlite">
+<h2>Open GeoPackage in DB Browser for SQLITE<a class="headerlink" href="#open-geopackage-in-db-browser-for-sqlite" title="Permalink to this headline">¶</a></h2>
+<p>Close QGIS and start up the program <a class="reference external" href="http://sqlitebrowser.org/">DB Browser for SQLite</a> . Open the previously downloaded GeoPackage file. Note that you will need to set the file type of file browser to <em>All files (*)</em>.</p>
+<p>It should look more or less like this:</p>
+<a class="reference internal image-reference" href="_images/db_browser.png"><img alt="_images/db_browser.png" class="align-center" src="_images/db_browser.png" style="width: 400px;" /></a>
+<p>In the tab <em>Database Structure</em> the tables in the GeoPackage are listed. There are three categories of tables:</p>
+<ol class="arabic simple">
+<li>Tables required by the <a class="reference external" href="http://www.geopackage.org/">GeoPackage format</a></li>
+<li>Tables required by the <a class="reference external" href="https://portal.opengeospatial.org/files/?artifact_id=55183">GeoPackage OWS-context format</a></li>
+<li>Dataset tables, in this case  <code class="docutils literal"><span class="pre">buurt_2017</span></code> , <code class="docutils literal"><span class="pre">gem_2017``and</span> <span class="pre">``wijk_2017</span></code></li>
+</ol>
+<p>See below for a short description on each table in the GeoPackage. You can view the data by opening the <em>Browse Data</em> tab and then select the table you are interested in from the dropdown menu at the top of the page.</p>
+<a class="reference internal image-reference" href="_images/db_browser_browse_data.png"><img alt="_images/db_browser_browse_data.png" class="align-center" src="_images/db_browser_browse_data.png" style="width: 400px;" /></a>
+<div class="section" id="geopackage-format-tables">
+<h3>GeoPackage format tables<a class="headerlink" href="#geopackage-format-tables" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gpkg-contents">
+<h4>gpkg_contents<a class="headerlink" href="#gpkg-contents" title="Permalink to this headline">¶</a></h4>
+<p>Lists the datasets the GeoPackage contains.  Column <cite>table_name</cite> contains the name of the table of that datasets.</p>
+</div>
+<div class="section" id="gpkg-geometry-columns">
+<h4>gpkg_geometry_columns<a class="headerlink" href="#gpkg-geometry-columns" title="Permalink to this headline">¶</a></h4>
+<p>Lists what column of the dataset contains the geometry and registers the coordinate reference system of that geometry.</p>
+</div>
+<div class="section" id="gpkg-metadata">
+<h4>gpkg_metadata<a class="headerlink" href="#gpkg-metadata" title="Permalink to this headline">¶</a></h4>
+<p>Table containing metadata of datasets. The format of the metadata (in the metadata column) is ISO19139.</p>
+</div>
+<div class="section" id="gpkg-metadata-reference">
+<h4>gpkg_metadata_reference<a class="headerlink" href="#gpkg-metadata-reference" title="Permalink to this headline">¶</a></h4>
+<p>Table maps metadata from gpkg_metadata table to dataset table. This mapping allows multiple datasets to share the same metadata record.</p>
+</div>
+</div>
+<div class="section" id="geopackage-ows-context-format-tables">
+<h3>GeoPackage OWS-context format tables<a class="headerlink" href="#geopackage-ows-context-format-tables" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="owc-context">
+<h4>owc_context<a class="headerlink" href="#owc-context" title="Permalink to this headline">¶</a></h4>
+<p>Containing the <a class="reference external" href="http://www.owscontext.org/">OWS-context</a> file that defines the map definition; it contains which layers, layer sequence, map bbox and projection of the map.</p>
+</div>
+<div class="section" id="owc-style">
+<h4>owc_style<a class="headerlink" href="#owc-style" title="Permalink to this headline">¶</a></h4>
+<p>Table containing styling information. Styling is saved in <a class="reference external" href="http://www.opengeospatial.org/standards/sld">SLD file</a> (version 1.1.0).</p>
+</div>
+<div class="section" id="ocw-resource">
+<h4>ocw_resource<a class="headerlink" href="#ocw-resource" title="Permalink to this headline">¶</a></h4>
+<p>Table containing additional resource files. For example picture symbols, svg icons and fonts refenced in style.</p>
+</div>
+</div>
+<div class="section" id="dataset-tables">
+<h3>Dataset tables<a class="headerlink" href="#dataset-tables" title="Permalink to this headline">¶</a></h3>
+<p>Each dataset table contains a geometry column, an identifier column and zero or more attribute columns. The geometry is saved in Well Known Binary (WKB) geometry format, with an GeoPackage specific header, see the <a class="reference external" href="http://www.geopackage.org/spec/#gpb_format">specification</a>.</p>
+</div>
+<div class="section" id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>GeoCat Bridge is an extension for ArcGIS Desktop, that enables users to publish their map projects to MapServer, GeoServer and GeoNetwork.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2017, GeoCat BV.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/explore_geopackage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

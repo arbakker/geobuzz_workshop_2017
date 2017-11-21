@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" xmlns:lang="en" xmlns:owc="http://www.opengis.net/owc/1.0">
+  <link href="http://www.opengis.net/spec/owc-atom/1.0/req/core" rel="profile" title="This file is compliant with version 1.0 of OGC Context"/>
+  <id/>
+  <title>GeoPackage Workshop</title>
+  <author>
+    <name>Anton Bakker</name>
+  </author>
+  <updated>2017-11-21T12:56:11</updated>
+  <georss:where>
+    <gml:Envelope srs="EPSG:28992" srsDimension="2">
+      <gml:lowerCorner>-205289.779125941 290553.397916208</gml:lowerCorner>
+      <gml:upperCorner>603210.027920259 736599.197171638</gml:upperCorner>
+    </gml:Envelope>
+  </georss:where>
+<entry>
+  <id>http://www.geocat.net/maps//layers/wijk_2017_huishoudens_kinderen</id>
+  <title>wijk_2017</title>
+  <updated>2017-11-21T17:57:22</updated>
+  <category scheme="http://www.opengis.net/spec/owc/active" term="true"/>
+  <owc:offering code="http://www.opengis.net/spec/owc-atom/1.0/req/gpkg">
+    <owc:content href="#table=wijk_2017" type="application/x-sqlite"/>
+    <owc:styleSet>
+      <owc:name>wijk_2017_huishoudens_kinderen</owc:name>
+      <owc:title>wijk_2017_huishoudens_kinderen</owc:title>
+      <owc:content href="#table=owc_style&amp;name=wijk_2017_huishoudens_kinderen" type="application/sld+xml"/>
+    </owc:styleSet>
+  </owc:offering>
+</entry>
+  <entry>
+    <id>http://www.geocat.net/maps//layers/gem_2017</id>
+    <title>gem_2017</title>
+    <updated>2017-11-21T19:14:21</updated>
+    <category scheme="http://www.opengis.net/spec/owc/active" term="true"/>
+    <owc:offering code="http://www.opengis.net/spec/owc-atom/1.0/req/gpkg">
+      <owc:content href="#table=gem_2017" type="application/x-sqlite"/>
+      <owc:styleSet>
+        <owc:name>gem_2017</owc:name>
+        <owc:title>gem_2017</owc:title>
+        <owc:content href="#table=owc_style&amp;name=gem_2017" type="application/sld+xml"/>
+      </owc:styleSet>
+    </owc:offering>
+  </entry>
+  <entry>
+    <id>http://www.geocat.net/maps//layers/buurt_2017</id>
+    <title>buurt_2017</title>
+    <updated>2017-11-21T19:14:21</updated>
+    <category scheme="http://www.opengis.net/spec/owc/active" term="true"/>
+    <owc:offering code="http://www.opengis.net/spec/owc-atom/1.0/req/gpkg">
+      <owc:content href="#table=buurt_2017" type="application/x-sqlite"/>
+      <owc:styleSet>
+        <owc:name>buurt_2017</owc:name>
+        <owc:title>buurt_2017</owc:title>
+        <owc:content href="#table=owc_style&amp;name=buurt_2017" type="application/sld+xml"/>
+      </owc:styleSet>
+    </owc:offering>
+  </entry>
+</feed>
