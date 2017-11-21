@@ -41,7 +41,7 @@ Open GeoPackage in DB Browser for SQLITE
 
 Close QGIS and start up the program `DB Browser for SQLite <http://sqlitebrowser.org/>`_ . Open the previously downloaded GeoPackage file. Note that you will need to set the file type of file browser to *All files (\*)*.
 
-It should look more or less like this:
+It should look more or less like this after you have opened the GeoPackage file:
 
 .. image:: _static/db_browser.png
     :width: 400px
@@ -67,7 +67,7 @@ GeoPackage format tables
 gpkg_contents
 ~~~~~~~~~~~~~~
 
-Lists the datasets the GeoPackage contains.  Column `table_name` contains the name of the table of that datasets.
+Lists the datasets the GeoPackage contains.  Column `table_name` contains the name of the table of that datasets. Any dataset in the GeoPackage needs to be registered in this table otherwise GeoPackage will not "see" the dataset in the GeoPackage.
 
 gpkg_geometry_columns
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -100,7 +100,6 @@ Table containing styling information. Styling is saved in `SLD file <http://www.
 ocw_resource
 ~~~~~~~~~~~~~
 Table containing additional resource files. For example picture symbols, SVG icons and fonts referenced in style. 
-
 
 
 Dataset tables

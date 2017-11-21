@@ -110,7 +110,7 @@
 <div class="section" id="open-geopackage-in-db-browser-for-sqlite">
 <h2>1.2. Open GeoPackage in DB Browser for SQLITE<a class="headerlink" href="#open-geopackage-in-db-browser-for-sqlite" title="Permalink to this headline">¶</a></h2>
 <p>Close QGIS and start up the program <a class="reference external" href="http://sqlitebrowser.org/">DB Browser for SQLite</a> . Open the previously downloaded GeoPackage file. Note that you will need to set the file type of file browser to <em>All files (*)</em>.</p>
-<p>It should look more or less like this:</p>
+<p>It should look more or less like this after you have opened the GeoPackage file:</p>
 <a class="reference internal image-reference" href="_images/db_browser.png"><img alt="_images/db_browser.png" class="align-center" src="_images/db_browser.png" style="width: 400px;" /></a>
 <p>In the tab <em>Database Structure</em> the tables in the GeoPackage are listed. There are three categories of tables:</p>
 <ol class="arabic simple">
@@ -124,7 +124,7 @@
 <h3>GeoPackage format tables<a class="headerlink" href="#geopackage-format-tables" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="gpkg-contents">
 <h4>gpkg_contents<a class="headerlink" href="#gpkg-contents" title="Permalink to this headline">¶</a></h4>
-<p>Lists the datasets the GeoPackage contains.  Column <cite>table_name</cite> contains the name of the table of that datasets.</p>
+<p>Lists the datasets the GeoPackage contains.  Column <cite>table_name</cite> contains the name of the table of that datasets. Any dataset in the GeoPackage needs to be registered in this table otherwise GeoPackage will not &#8220;see&#8221; the dataset in the GeoPackage.</p>
 </div>
 <div class="section" id="gpkg-geometry-columns">
 <h4>gpkg_geometry_columns<a class="headerlink" href="#gpkg-geometry-columns" title="Permalink to this headline">¶</a></h4>
