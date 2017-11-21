@@ -21,7 +21,14 @@ QGIS should come with the `QGIS GeoPackage extension <https://github.com/pka/qgp
     :width: 200px
     :align: center
 
-Click the *Read project from geopackage* button (the one with the arrow pointing up) and browse to the previously downloaded OWS-context GeoPackage file. QGIS now opens up the OWS-context GeoPackage file:
+If the buttons are not visible check if the plugin is enabled. In the QGIS menubar click *Plugins>Manage and install plugins* and go to the *Installed* tab. Check that the *QGIS Map Styling Geopackage Plugin* is enabled:
+
+.. image:: _static/qgis_plugins.png
+    :width: 400px
+    :align: center
+
+
+To open the GeoPackage click the *Read project from geopackage* button (the one with the arrow pointing up) and browse to the previously downloaded ``workshop.gpkg`` file. QGIS now opens up the OWS-context GeoPackage file:
 
 
 .. image:: _static/open_geopackage_qgis.png
