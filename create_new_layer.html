@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. Create new layer in OWS-context file &#8212; GeoPackage Workshop - Geobuzz 2017 1.0 documentation</title>
+    <title>2. Create new layer in OWS-context file &mdash; GeoPackage Workshop - Geobuzz 2017 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,20 +17,17 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="GeoPackage Workshop - Geobuzz 2017 1.0 documentation" href="index.html" />
     <link rel="next" title="3. Create new layer in GeoPackage" href="create_new_view.html" />
     <link rel="prev" title="1. Explore GeoPackage" href="explore_geopackage.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
@@ -96,6 +93,8 @@
 </div>
 <div class="section" id="create-new-sld">
 <h3>Create new SLD<a class="headerlink" href="#create-new-sld" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="preparation">
+<h4>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h4>
 <p>For our new style we choose the attribute <code class="docutils literal"><span class="pre">P_HH_M_K</span></code> to base the style on. In the PDF more information is give for this specific attribute:</p>
 <blockquote>
 <div><strong>P_HH_M_K: Huishoudens met kinderen [%]</strong>
@@ -115,16 +114,20 @@ niet-gehuwde paren met kinderen, echtparen met kinderen en eenouderhuishoudens.<
 <span class="mi">80</span><span class="o">-</span><span class="mi">100</span>
 </pre></div>
 </div>
-<p>Next we need to create a color ramp to represent the different values. <a class="reference external" href="http://colorbrewer2.org">ColorBrewer</a> has an excellent web application for this. In our case we have sequential data with 5 classes:</p>
+<p>Next we need to create a colour ramp to represent the different values. <a class="reference external" href="http://colorbrewer2.org">ColorBrewer</a> has an excellent web application for this. In our case we have sequential data with 5 classes:</p>
 <a class="reference internal image-reference" href="_images/color_brewer.png"><img alt="_images/color_brewer.png" class="align-center" src="_images/color_brewer.png" style="width: 400px;" /></a>
-<p>And copy over the hex color values (see the export tab): <code class="docutils literal"><span class="pre">#ffffd4,</span> <span class="pre">#fed98e,</span> <span class="pre">#fe9929,</span> <span class="pre">#d95f0e,</span> <span class="pre">#993404</span></code>.</p>
-<p>Copy over the value the content column of the record with name <code class="docutils literal"><span class="pre">wijk_2017</span></code> from the <code class="docutils literal"><span class="pre">owc_style</span></code> table. Use this as a template to create a new SLD file that uses the attribute <code class="docutils literal"><span class="pre">P_HH_M_K</span></code>, the bins <code class="docutils literal"><span class="pre">0-20</span></code>,``20-40``,``40-60``,``60-80``,``80-100`` and the color values <code class="docutils literal"><span class="pre">#ffffd4</span></code>, <code class="docutils literal"><span class="pre">#fed98e</span></code>, <code class="docutils literal"><span class="pre">#fe9929</span></code>, <code class="docutils literal"><span class="pre">#d95f0e</span></code>, <code class="docutils literal"><span class="pre">#993404</span></code>.</p>
-<p>Give the <code class="docutils literal"><span class="pre">NamedLayer/se:Name</span></code> element a new name, such as <code class="docutils literal"><span class="pre">wijk_2017_huishoudens_kinderen</span></code>. This will be name of our new layer.</p>
+<p>And copy over the hex colour values in a text editor for layer use: <code class="docutils literal"><span class="pre">#ffffd4,</span> <span class="pre">#fed98e,</span> <span class="pre">#fe9929,</span> <span class="pre">#d95f0e,</span> <span class="pre">#993404</span></code>.</p>
+</div>
+<div class="section" id="create-new-file">
+<h4>Create new file<a class="headerlink" href="#create-new-file" title="Permalink to this headline">¶</a></h4>
+<p>Use the SLD document of the layer <code class="docutils literal"><span class="pre">wijk_2017</span></code> as a template. The SLD document is stored in the <code class="docutils literal"><span class="pre">content</span></code> column of the <code class="docutils literal"><span class="pre">owc_style</span></code> table. Use the template to create a new SLD file that uses the attribute <code class="docutils literal"><span class="pre">P_HH_M_K</span></code>, the bins <code class="docutils literal"><span class="pre">0-20,</span> <span class="pre">20-40,</span> <span class="pre">40-60,</span> <span class="pre">60-80,</span> <span class="pre">80-100</span></code> and the colour values <code class="docutils literal"><span class="pre">#ffffd4</span></code>, <code class="docutils literal"><span class="pre">#fed98e</span></code>, <code class="docutils literal"><span class="pre">#fe9929</span></code>, <code class="docutils literal"><span class="pre">#d95f0e</span></code>, <code class="docutils literal"><span class="pre">#993404</span></code>.</p>
+<p>Do not forget to give the <code class="docutils literal"><span class="pre">NamedLayer/se:Name</span></code> element in the SLD a new name, such as <code class="docutils literal"><span class="pre">wijk_2017_huishoudens_kinderen</span></code>. This will be the name of our new layer.</p>
 <p>You can see the result <a class="reference external" href="https://drive.geocat.net/public.php?service=files&amp;t=6fee05d7c11462b6e852ca6281539d6c&amp;download">here</a> .</p>
+</div>
 </div>
 <div class="section" id="create-new-style-record">
 <h3>Create new style record<a class="headerlink" href="#create-new-style-record" title="Permalink to this headline">¶</a></h3>
-<p>Perform the following steps to create a new style record:</p>
+<p>With the new SLD we can create a new style record using the following steps:</p>
 <ol class="arabic simple">
 <li>When done create a new record in the <code class="docutils literal"><span class="pre">owc_style</span></code> table</li>
 <li>Paste the just created complete SLD document in the contents field.</li>
@@ -159,6 +162,10 @@ niet-gehuwde paren met kinderen, echtparen met kinderen en eenouderhuishoudens.<
 <p class="first admonition-title">Note</p>
 <p class="last">We need to replace the entry, because it is not possible to add an entry in the OWS-context document with a title that is not in the list of layers of the GeoPackage. A bug in the QGIS GeoPackage Extension, the title of entries in the OWS-context document should be able to contain any value (that is a valid string).</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The entry element has a reference to a data source; <code class="docutils literal"><span class="pre">table=wijk_2017</span></code> and a reference to a style source; <code class="docutils literal"><span class="pre">#table=owc_style&amp;amp;name=wijk_2017_huishoudens_kinderen</span></code>. The data source refers to a table, the style source refers to a record in the table <code class="docutils literal"><span class="pre">owc_style</span></code>.</p>
+</div>
 <p>You can download the resulting OWS-context file <a class="reference external" href="https://drive.geocat.net/public.php?service=files&amp;t=f76e543563e1819e4b4ed49d6083b10a&amp;download">here</a></p>
 <p>Copy and paste the entire OWS-context document back into the <code class="docutils literal"><span class="pre">content</span></code> field of the only record in the <code class="docutils literal"><span class="pre">owc_context</span></code> table. Do not forget to click <em>Apply</em> and then <em>Write Changes</em> to persist the changes to the database.</p>
 <p>Close the <em>DB Browser for SQLite</em> application and open up the modified <code class="docutils literal"><span class="pre">workshop.gpkg</span></code> file in QGIS:</p>
@@ -180,11 +187,11 @@ niet-gehuwde paren met kinderen, echtparen met kinderen en eenouderhuishoudens.<
       &copy;2017, GeoCat BV.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
-      <a href="_sources/create_new_layer.rst.txt"
+      <a href="_sources/create_new_layer.txt"
           rel="nofollow">Page source</a>
     </div>
 
